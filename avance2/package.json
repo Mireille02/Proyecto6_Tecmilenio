@@ -1,0 +1,14 @@
+{
+  "name": "avance2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "Error"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "qrcode": "^1.5.3"
+  }
+}
