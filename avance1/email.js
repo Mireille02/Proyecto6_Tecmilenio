@@ -1,20 +1,20 @@
 const nodemailer = require('nodemailer');
-let transpoter = nodemailer.createTransport({
-    host: '',
+let transporter = nodemailer.createTransport({
+    host: 'sandbox.smtp.mailtrap.io',
     port: 2525,
     auth: {
-        user: "",
-        pass: ""
-    }
+        user: "9f4c1fb13246fa",
+        pass: "c38f23c726e0b5"
+    },
 })
 
 message = {
-    from: "",
-    to: "",
-    subject: "",
-    text: ""
+    from: "deejemplo@email.com",
+    to: "paraejemplo@email.com",
+    subject: "Titulo",
+    text: "Coreo SMTP de prueba parte 2"
 }
-transporter.sendMail(message, **function**(err, info) {
+transporter.sendMail(message, function (err, info) {
     if (err) {
         console.log(err)       
     }else{
@@ -22,15 +22,3 @@ transporter.sendMail(message, **function**(err, info) {
     }
 }) 
 
-Host:
-sandbox.smtp.mailtrap.io
-Port:
-25 or 465 or 587 or 2525
-Username:
-9f4c1fb13246fa
-Password:
-c38f23c726e0b5
-Auth:
-PLAIN, LOGIN and CRAM-MD5
-TLS:
-Optional (STARTTLS on all ports)
